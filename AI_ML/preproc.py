@@ -23,7 +23,6 @@ conf_mat = confusion_matrix(y_test, y_pred)
 precision = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
 roc_auc = roc_auc_score(y_test, y_prob)
-
 print("Confusion Matrix:\n", conf_mat)
 print(f"Precision: {precision:.2f}")
 print(f"Recall: {recall:.2f}")
@@ -39,11 +38,8 @@ plt.legend()
 plt.grid(True)
 plt.tight_layout()
 plt.show()
-
-# 7. Sigmoid function and threshold tuning demo
 def sigmoid(z):
     return 1 / (1 + np.exp(-z))
-
 z = np.linspace(-10, 10, 200)
 plt.figure(figsize=(6, 4))
 plt.plot(z, sigmoid(z), color='purple')
